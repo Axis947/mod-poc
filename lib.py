@@ -1,3 +1,7 @@
+###### NOTICE ######
+# As of right now, this script is useless for operation.
+# It is being preserved so that if it is needed, it can be restored.
+
 # This is what the mod file imports and communicates with. The build script hooks up with this.
 
 class ModLine():
