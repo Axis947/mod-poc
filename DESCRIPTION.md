@@ -45,11 +45,15 @@ This largely depends on what the modding system is. This documentation will run 
 
 ### Tynker, Minecraft Bedrock mods, or similar
 
-The way Tynker works is by providing a set of ways to modify the way Minecraft behaves. Even though this has full compatibility, it is very limiting in what you can do. For example, if you want to add a thirst bar, you can't. It also is designed for a single game, and has a central authority controlling it.
+The way these work is by providing a set of ways to modify the way Minecraft behaves. Even though this has full compatibility, it is very limiting in what you can do. For example, if you want to add a thirst bar, you can't. It also is designed for a single game, and has a central authority controlling it.
 
 ### Fabric or similar
 
 Fabric allows you to hook into the code by adding places to execute code. However, you cannot do anything that makes it hard for other mods to load (eg. high-quality skins like on Bedrock). It is also designed for a single game (even though it may not be necessary).
+
+## Bukkit, Forge, or similar
+
+These just run on top of Minecraft, using APIs that were injected by developers. It involves a central authority, is designed for a specific game, and is limiting. The only reason why this is different from Tynker, Bedrock mods, or similar is that these have an API that is used by running code instead of using a static, beginner-facing generic creation.
 
 
 ## What this modder will NOT be
