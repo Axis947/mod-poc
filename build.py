@@ -1,17 +1,20 @@
 """
 This program takes mods and an apparatus and combines them together.
 """
+      
+import importlib
+class Handler():
+    def __init__(self):
+        self.comments = [] # Ordered to allow precedence
+        self.apparatus = None
 
-# The code below is useless for operation. It is being preserved so that it may be restored if needed.
-"""
-mod_line_ = None
-class build_line(metaclass=object):
-    self = build_line
-    mod_line = mod_line_
+    def comment(self, comment):
+        self.comments.append(comment)
 
-    def main():
-"""        
-
-
-def build(apparatus, list: mod_list):
-    
+    def build(self, apparatus, mod_names: list):
+        self.apparatus = apparatus
+        for mod_name in mod_names:
+            mod = importlib.import_module(mod_name)
+            mod.set_handler(self)
+            self.apparatus = mod.modify(self.apparatus)
+        

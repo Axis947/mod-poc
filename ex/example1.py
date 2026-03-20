@@ -1,5 +1,9 @@
-class Mod(metaclass=object):
-    self = Mod
-    def build_get(build_line):
-        self.build_line = build_line
-        
+HANDLER = None
+
+def set_handler(handler):
+    global HANDLER
+    HANDLER = handler
+
+def modify(apparatus):
+    HANDLER.comment("Example 1 worked")
+    return f"example1({apparatus})"
