@@ -20,8 +20,6 @@ What is OK to use is some form of symmetrical rule-of-thumb (eg. Don't rely on o
 
 As of now, this documentation covers a modder that allows for modding a single apparatus. It lets each mod modify it and correct for any imcompatibilities it causes. Read the section below for its flaws. With work, the abilities of this modder will increase. The goal is to have a modder that doesn't allow mods to throttle the ability for the modder to work, that can support mods made for different procedures to generate an apparatus and parse it (with compatibility layers that are made by programmers, that don't need to treat any method as the "main" method), has a sandboxed variant that mitigates remote code execution vulnerabilities for *specific untrusted mods*, and works inside of other modders/modloaders.
 
-Commits with this message in it are using a beta version intended to draft communication before implementing properly.
-
 ## Input
 
 This modding architecture takes an apparatus. This is what you want to mod. It can be anything, although usually, it will be a game installation's directory tree. 
@@ -39,6 +37,8 @@ The first mod receives the original apparatus and changes it, and sets event han
 - Any mod is able to throttle or supress the ability of the modder to work
 
 - All the mods must be designed for a single version of the apparatus. If the apparatus is generated and parsed in a slightly different method, all mods will be incompatible with that method unless specifically designed
+
+- 2 mods will cause a loop if they try to correct eachother.
 
 
 ## Why this will be better than a naive system

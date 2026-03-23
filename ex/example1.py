@@ -7,3 +7,6 @@ def set_handler(handler):
 def modify(apparatus):
     HANDLER.comment("Example 1 worked")
     return f"example1({apparatus})"
+
+def correct(apparatus):
+    return apparatus.replace("[", "{[").replace("]", "]}")
